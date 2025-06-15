@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sri Lankan Government Variables */
+:root {
+    --sl-maroon: #8B1538;
+    --sl-gold: #D4AF37;
+}
+
+/* Custom Components */
+@layer components {
+    .bg-sl-maroon {
+        background-color: var(--sl-maroon);
+    }
+
+    .text-sl-maroon {
+        color: var(--sl-maroon);
+    }
+
+    .bg-sl-gold {
+        background-color: var(--sl-gold);
+    }
+
+    .text-sl-gold {
+        color: var(--sl-gold);
+    }
+
+    .border-sl-maroon {
+        border-color: var(--sl-maroon);
+    }
+
+    .border-sl-gold {
+        border-color: var(--sl-gold);
+    }
+}
+
+/* Custom Animations */
+@layer utilities {
+    .animate-tilt {
+        animation: tilt 10s infinite linear;
+    }
+}
+
+@keyframes tilt {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0.5deg);
+    }
+    75% {
+        transform: rotate(-0.5deg);
+    }
+}
