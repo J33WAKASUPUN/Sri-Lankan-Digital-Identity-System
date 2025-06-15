@@ -7,55 +7,112 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# 🇱🇰 Sri Lankan Digital Identity System
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Laravel](https://img.shields.io/badge/Laravel-12.0-red.svg)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC.svg)](https://tailwindcss.com)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> **A complete government-grade digital identity management system built with Laravel 12**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Modern web application that digitizes Sri Lanka's ID card issuance process with multi-role authentication, workflow management, and secure digital card generation.
 
-## Learning Laravel
+## ✨ Key Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **🔐 Multi-Role System** - Admin, DS Officers, GS Officers, and Citizens
+- **💳 Digital Card Generation** - PDF certificates with QR codes
+- **📊 Real-time Dashboards** - Application tracking and analytics  
+- **🔍 Public Verification** - Instant card verification portal
+- **📱 Responsive Design** - Mobile-first government interfaces
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Quick Start
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Prerequisites
+- PHP 8.2+
+- Composer
+- Node.js 18+
+- MySQL 8.0+
 
-## Laravel Sponsors
+### Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+# Clone repository
+git clone https://github.com/J33WAKASUPUN/sri-lanka-digital-id.git
+cd sri-lanka-digital-id
 
-### Premium Partners
+# Install dependencies
+composer install
+npm install
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# Environment setup
+cp .env.example .env
+php artisan key:generate
 
-## Contributing
+# Database setup
+php artisan migrate
+php artisan db:seed
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Build and serve
+npm run build
+php artisan serve
+```
 
-## Code of Conduct
+Visit `http://localhost:8000` to access the application.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 👥 Demo Accounts
 
-## Security Vulnerabilities
+| Role | Email | Password | Access |
+|------|-------|----------|---------|
+| Admin | admin@digitalid.gov.lk | admin123 | Full system |
+| DS Officer | ds.colombo@digitalid.gov.lk | ds123456 | Approvals |
+| GS Officer | gs.kandy@digitalid.gov.lk | gs123456 | Reviews |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🏗️ Tech Stack
 
-## License
+**Backend**
+- Laravel 12 with PHP 8.2+
+- MySQL 8.0 database
+- DomPDF for certificate generation
+- QR Code integration
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Frontend**  
+- Tailwind CSS 3.4
+- Alpine.js for interactions
+- Blade templating
+- Responsive design
+
+## 🔄 Application Workflow
+
+```
+Citizen Application → GS Review → DS Approval → Digital Card → Public Verification
+```
+
+## 📊 Project Stats
+
+- ⏱️ **Built in:** 18 hours
+- 📁 **Files:** 50+ components
+- 🛠️ **Controllers:** 15+ modules
+- 🎨 **Views:** 30+ templates
+- 🔐 **Security:** Enterprise-level
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+---
+
+<div align="center">
+
+**Built with ❤️ by [J33WAKASUPUN](https://github.com/J33WAKASUPUN)**
+
+⭐ Star this repository if you found it helpful!
+
+</div>
